@@ -1,0 +1,13 @@
+#version 330 es
+
+uniform mediump mat4 LVWVP;
+
+out mediump vec4 wvpposition;
+in mediump vec3 pos;
+
+void main()
+{
+    wvpposition = LVWVP * vec4(pos, 1.0);
+    gl_Position = wvpposition;
+}
+

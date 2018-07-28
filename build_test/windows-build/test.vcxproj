@@ -1,0 +1,2451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="Debug|Win32">
+			<Configuration>Debug</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|Win32">
+			<Configuration>Release</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Debug|x64">
+			<Configuration>Debug</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|x64">
+			<Configuration>Release</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+	<PropertyGroup Label="Globals">
+		<ProjectGuid>{7E8CF2A2-77AC-4C38-8B82-E4A66CE2B894}</ProjectGuid>
+		<VCProjectVersion>15.0</VCProjectVersion>
+		<WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+	<PropertyGroup Condition="'$(Configuration)'=='Debug'" Label="Configuration">
+		<ConfigurationType>Application</ConfigurationType>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v141</PlatformToolset>
+		<CharacterSet>Unicode</CharacterSet>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)'=='Release'" Label="Configuration">
+		<ConfigurationType>Application</ConfigurationType>
+		<UseDebugLibraries>false</UseDebugLibraries>
+		<PlatformToolset>v141</PlatformToolset>
+		<WholeProgramOptimization>true</WholeProgramOptimization>
+		<CharacterSet>Unicode</CharacterSet>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+	<ImportGroup Label="ExtensionSettings">
+	</ImportGroup>
+	<PropertyGroup Label="UserMacros" />
+	<ImportGroup Label="PropertySheets" Condition="'$(Platform)'=='Win32'">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<ImportGroup Label="PropertySheets" Condition="'$(Platform)'=='x64'">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+		<ClCompile>
+			<AdditionalIncludeDirectories>E:\armory tests\build_test\windows-build\Sources\include;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\pcre-7.8;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\zlib-1.2.3;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\libs\nekoapi;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Sources;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Microsoft\Sources;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics4\OpenGL\Sources;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Audio2\WASAPI\Sources;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics5\G5onG4\Sources;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Audio3\A3onA2\Sources</AdditionalIncludeDirectories>
+			<WarningLevel>Level3</WarningLevel>
+			<Optimization>Disabled</Optimization>
+			<PreprocessorDefinitions>HX_WINDOWS;KORE_MULTITHREADED_AUDIO;HXCPP_API_LEVEL=330;STATIC_LINK;PCRE_STATIC;HXCPP_SET_PROP;HXCPP_VISIT_ALLOCS;KORE;ROTATE90;_WINSOCK_DEPRECATED_NO_WARNINGS;KORE_G1;KORE_G2;KORE_G3;KORE_A1;KORE_A2;KORE_WINDOWS;KORE_MICROSOFT;_CRT_SECURE_NO_WARNINGS;KORE_OPENGL;GLEW_STATIC;KORE_G4;KORE_G5;KORE_G5ONG4;KORE_A3;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+			<MultiProcessorCompilation>true</MultiProcessorCompilation>
+			<MinimalRebuild>false</MinimalRebuild>
+		</ClCompile>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<AdditionalDependencies>ws2_32.lib;dxguid.lib;dsound.lib;dinput8.lib;strmiids.lib;winmm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+		<ClCompile>
+			<AdditionalIncludeDirectories>E:\armory tests\build_test\windows-build\Sources\include;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\pcre-7.8;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\zlib-1.2.3;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\libs\nekoapi;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Sources;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Microsoft\Sources;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics4\OpenGL\Sources;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Audio2\WASAPI\Sources;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics5\G5onG4\Sources;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Audio3\A3onA2\Sources</AdditionalIncludeDirectories>
+			<WarningLevel>Level3</WarningLevel>
+			<Optimization>MaxSpeed</Optimization>
+			<FunctionLevelLinking>true</FunctionLevelLinking>
+			<IntrinsicFunctions>true</IntrinsicFunctions>
+			<PreprocessorDefinitions>HX_WINDOWS;KORE_MULTITHREADED_AUDIO;HXCPP_API_LEVEL=330;STATIC_LINK;PCRE_STATIC;HXCPP_SET_PROP;HXCPP_VISIT_ALLOCS;KORE;ROTATE90;_WINSOCK_DEPRECATED_NO_WARNINGS;KORE_G1;KORE_G2;KORE_G3;KORE_A1;KORE_A2;KORE_WINDOWS;KORE_MICROSOFT;_CRT_SECURE_NO_WARNINGS;KORE_OPENGL;GLEW_STATIC;KORE_G4;KORE_G5;KORE_G5ONG4;KORE_A3;WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+			<MultiProcessorCompilation>true</MultiProcessorCompilation>
+			<MinimalRebuild>false</MinimalRebuild>
+		</ClCompile>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+			<OptimizeReferences>true</OptimizeReferences>
+			<AdditionalDependencies>ws2_32.lib;dxguid.lib;dsound.lib;dinput8.lib;strmiids.lib;winmm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+		<ClCompile>
+			<AdditionalIncludeDirectories>E:\armory tests\build_test\windows-build\Sources\include;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\pcre-7.8;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\zlib-1.2.3;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\libs\nekoapi;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Sources;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Microsoft\Sources;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics4\OpenGL\Sources;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Audio2\WASAPI\Sources;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics5\G5onG4\Sources;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Audio3\A3onA2\Sources</AdditionalIncludeDirectories>
+			<WarningLevel>Level3</WarningLevel>
+			<Optimization>Disabled</Optimization>
+			<PreprocessorDefinitions>HX_WINDOWS;KORE_MULTITHREADED_AUDIO;HXCPP_API_LEVEL=330;STATIC_LINK;PCRE_STATIC;HXCPP_SET_PROP;HXCPP_VISIT_ALLOCS;KORE;ROTATE90;_WINSOCK_DEPRECATED_NO_WARNINGS;KORE_G1;KORE_G2;KORE_G3;KORE_A1;KORE_A2;KORE_WINDOWS;KORE_MICROSOFT;_CRT_SECURE_NO_WARNINGS;KORE_OPENGL;GLEW_STATIC;KORE_G4;KORE_G5;KORE_G5ONG4;KORE_A3;SYS_64;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+			<MultiProcessorCompilation>true</MultiProcessorCompilation>
+			<MinimalRebuild>false</MinimalRebuild>
+		</ClCompile>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<AdditionalDependencies>ws2_32.lib;dxguid.lib;dsound.lib;dinput8.lib;strmiids.lib;winmm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+		<ClCompile>
+			<AdditionalIncludeDirectories>E:\armory tests\build_test\windows-build\Sources\include;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\pcre-7.8;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\zlib-1.2.3;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\libs\nekoapi;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Sources;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Microsoft\Sources;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics4\OpenGL\Sources;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Audio2\WASAPI\Sources;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics5\G5onG4\Sources;C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Audio3\A3onA2\Sources</AdditionalIncludeDirectories>
+			<WarningLevel>Level3</WarningLevel>
+			<Optimization>MaxSpeed</Optimization>
+			<FunctionLevelLinking>true</FunctionLevelLinking>
+			<IntrinsicFunctions>true</IntrinsicFunctions>
+			<PreprocessorDefinitions>HX_WINDOWS;KORE_MULTITHREADED_AUDIO;HXCPP_API_LEVEL=330;STATIC_LINK;PCRE_STATIC;HXCPP_SET_PROP;HXCPP_VISIT_ALLOCS;KORE;ROTATE90;_WINSOCK_DEPRECATED_NO_WARNINGS;KORE_G1;KORE_G2;KORE_G3;KORE_A1;KORE_A2;KORE_WINDOWS;KORE_MICROSOFT;_CRT_SECURE_NO_WARNINGS;KORE_OPENGL;GLEW_STATIC;KORE_G4;KORE_G5;KORE_G5ONG4;KORE_A3;SYS_64;WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+			<MultiProcessorCompilation>true</MultiProcessorCompilation>
+			<MinimalRebuild>false</MinimalRebuild>
+		</ClCompile>
+		<Link>
+			<SubSystem>Windows</SubSystem>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+			<OptimizeReferences>true</OptimizeReferences>
+			<AdditionalDependencies>ws2_32.lib;dxguid.lib;dsound.lib;dinput8.lib;strmiids.lib;winmm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemGroup>
+		<ClInclude Include="Sources\include\Type.h" />
+		<ClInclude Include="Sources\include\ValueType.h" />
+		<ClInclude Include="Sources\include\StringTools.h" />
+		<ClInclude Include="Sources\include\StringBuf.h" />
+		<ClInclude Include="Sources\include\Std.h" />
+		<ClInclude Include="Sources\include\Reflect.h" />
+		<ClInclude Include="Sources\include\Main.h" />
+		<ClInclude Include="Sources\include\List.h" />
+		<ClInclude Include="Sources\include\Lambda.h" />
+		<ClInclude Include="Sources\include\Date.h" />
+		<ClInclude Include="Sources\include\sys\FileSystem.h" />
+		<ClInclude Include="Sources\include\sys\io\FileSeek.h" />
+		<ClInclude Include="Sources\include\sys\io\FileOutput.h" />
+		<ClInclude Include="Sources\include\sys\io\FileInput.h" />
+		<ClInclude Include="Sources\include\sys\io\File.h" />
+		<ClInclude Include="Sources\include\kha\Worker.h" />
+		<ClInclude Include="Sources\include\kha\WindowOptions.h" />
+		<ClInclude Include="Sources\include\kha\WindowedModeOptions.h" />
+		<ClInclude Include="Sources\include\kha\RendererOptions.h" />
+		<ClInclude Include="Sources\include\kha\TargetDisplay.h" />
+		<ClInclude Include="Sources\include\kha\Position.h" />
+		<ClInclude Include="Sources\include\kha\WindowMode.h" />
+		<ClInclude Include="Sources\include\kha\Video.h" />
+		<ClInclude Include="Sources\include\kha\SystemImpl.h" />
+		<ClInclude Include="Sources\include\kha\System.h" />
+		<ClInclude Include="Sources\include\kha\Sound.h" />
+		<ClInclude Include="Sources\include\kha\Shaders.h" />
+		<ClInclude Include="Sources\include\kha\ScreenRotation.h" />
+		<ClInclude Include="Sources\include\kha\Scheduler.h" />
+		<ClInclude Include="Sources\include\kha\FrameTask.h" />
+		<ClInclude Include="Sources\include\kha\TimeTask.h" />
+		<ClInclude Include="Sources\include\kha\LoaderImpl.h" />
+		<ClInclude Include="Sources\include\kha\Kravur.h" />
+		<ClInclude Include="Sources\include\kha\KravurImage.h" />
+		<ClInclude Include="Sources\include\kha\AlignedQuad.h" />
+		<ClInclude Include="Sources\include\kha\Image.h" />
+		<ClInclude Include="Sources\include\kha\Resource.h" />
+		<ClInclude Include="Sources\include\kha\Framebuffer.h" />
+		<ClInclude Include="Sources\include\kha\DisplayImpl.h" />
+		<ClInclude Include="Sources\include\kha\Display.h" />
+		<ClInclude Include="Sources\include\kha\Canvas.h" />
+		<ClInclude Include="Sources\include\kha\Assets.h" />
+		<ClInclude Include="Sources\include\kha\vr\VrInterfaceEmulated.h" />
+		<ClInclude Include="Sources\include\kha\vr\VrInterface.h" />
+		<ClInclude Include="Sources\include\kha\vr\TimeWarpParms.h" />
+		<ClInclude Include="Sources\include\kha\vr\TimeWarpImage.h" />
+		<ClInclude Include="Sources\include\kha\vr\SensorState.h" />
+		<ClInclude Include="Sources\include\kha\vr\PoseState.h" />
+		<ClInclude Include="Sources\include\kha\vr\Pose.h" />
+		<ClInclude Include="Sources\include\kha\network\SyncBuilder.h" />
+		<ClInclude Include="Sources\include\kha\network\Session.h" />
+		<ClInclude Include="Sources\include\kha\network\State.h" />
+		<ClInclude Include="Sources\include\kha\network\Network.h" />
+		<ClInclude Include="Sources\include\kha\network\LocalClient.h" />
+		<ClInclude Include="Sources\include\kha\network\Entity.h" />
+		<ClInclude Include="Sources\include\kha\network\ControllerBuilder.h" />
+		<ClInclude Include="Sources\include\kha\network\Client.h" />
+		<ClInclude Include="Sources\include\kha\network\Controller.h" />
+		<ClInclude Include="Sources\include\kha\math\Vector4.h" />
+		<ClInclude Include="Sources\include\kha\math\Vector3.h" />
+		<ClInclude Include="Sources\include\kha\math\Vector2.h" />
+		<ClInclude Include="Sources\include\kha\math\Quaternion.h" />
+		<ClInclude Include="Sources\include\kha\math\Matrix4.h" />
+		<ClInclude Include="Sources\include\kha\math\Matrix3.h" />
+		<ClInclude Include="Sources\include\kha\math\FastVector4.h" />
+		<ClInclude Include="Sources\include\kha\math\FastVector3.h" />
+		<ClInclude Include="Sources\include\kha\math\FastVector2.h" />
+		<ClInclude Include="Sources\include\kha\math\FastMatrix3.h" />
+		<ClInclude Include="Sources\include\kha\math\FastMatrix4.h" />
+		<ClInclude Include="Sources\include\kha\kore\Video.h" />
+		<ClInclude Include="Sources\include\kha\kore\Sound.h" />
+		<ClInclude Include="Sources\include\kha\kore\Keyboard.h" />
+		<ClInclude Include="Sources\include\kha\kore\graphics4\TextureUnit.h" />
+		<ClInclude Include="Sources\include\kha\kore\graphics4\Graphics2.h" />
+		<ClInclude Include="Sources\include\kha\kore\graphics4\Graphics.h" />
+		<ClInclude Include="Sources\include\kha\kore\graphics4\ConstantLocation.h" />
+		<ClInclude Include="Sources\include\kha\internal\BytesBlob.h" />
+		<ClInclude Include="Sources\include\kha\input\Surface.h" />
+		<ClInclude Include="Sources\include\kha\input\SensorType.h" />
+		<ClInclude Include="Sources\include\kha\input\Sensor.h" />
+		<ClInclude Include="Sources\include\kha\input\Pen.h" />
+		<ClInclude Include="Sources\include\kha\input\MouseImpl.h" />
+		<ClInclude Include="Sources\include\kha\input\Mouse.h" />
+		<ClInclude Include="Sources\include\kha\input\Keyboard.h" />
+		<ClInclude Include="Sources\include\kha\input\Gamepad.h" />
+		<ClInclude Include="Sources\include\kha\graphics4\VertexStructure.h" />
+		<ClInclude Include="Sources\include\kha\graphics4\VertexShader.h" />
+		<ClInclude Include="Sources\include\kha\graphics4\VertexElement.h" />
+		<ClInclude Include="Sources\include\kha\graphics4\VertexData.h" />
+		<ClInclude Include="Sources\include\kha\graphics4\VertexBuffer.h" />
+		<ClInclude Include="Sources\include\kha\graphics4\Usage.h" />
+		<ClInclude Include="Sources\include\kha\graphics4\TextureUnit.h" />
+		<ClInclude Include="Sources\include\kha\graphics4\TextureFormat.h" />
+		<ClInclude Include="Sources\include\kha\graphics4\TextureFilter.h" />
+		<ClInclude Include="Sources\include\kha\graphics4\TextureAddressing.h" />
+		<ClInclude Include="Sources\include\kha\graphics4\TexDir.h" />
+		<ClInclude Include="Sources\include\kha\graphics4\TessellationEvaluationShader.h" />
+		<ClInclude Include="Sources\include\kha\graphics4\TessellationControlShader.h" />
+		<ClInclude Include="Sources\include\kha\graphics4\StencilAction.h" />
+		<ClInclude Include="Sources\include\kha\graphics4\PipelineState.h" />
+		<ClInclude Include="Sources\include\kha\graphics4\PipelineStateBase.h" />
+		<ClInclude Include="Sources\include\kha\graphics4\MipMapFilter.h" />
+		<ClInclude Include="Sources\include\kha\graphics4\IndexBuffer.h" />
+		<ClInclude Include="Sources\include\kha\graphics4\Graphics2.h" />
+		<ClInclude Include="Sources\include\kha\graphics4\TextShaderPainter.h" />
+		<ClInclude Include="Sources\include\kha\graphics4\ColoredShaderPainter.h" />
+		<ClInclude Include="Sources\include\kha\graphics4\ImageShaderPainter.h" />
+		<ClInclude Include="Sources\include\kha\graphics4\Graphics.h" />
+		<ClInclude Include="Sources\include\kha\graphics4\GeometryShader.h" />
+		<ClInclude Include="Sources\include\kha\graphics4\FragmentShader.h" />
+		<ClInclude Include="Sources\include\kha\graphics4\CullMode.h" />
+		<ClInclude Include="Sources\include\kha\graphics4\CubeMap.h" />
+		<ClInclude Include="Sources\include\kha\graphics4\ConstantLocation.h" />
+		<ClInclude Include="Sources\include\kha\graphics4\CompareMode.h" />
+		<ClInclude Include="Sources\include\kha\graphics4\BlendingOperation.h" />
+		<ClInclude Include="Sources\include\kha\graphics4\BlendingFactor.h" />
+		<ClInclude Include="Sources\include\kha\graphics2\VerTextAlignment.h" />
+		<ClInclude Include="Sources\include\kha\graphics2\ImageScaleQuality.h" />
+		<ClInclude Include="Sources\include\kha\graphics2\HorTextAlignment.h" />
+		<ClInclude Include="Sources\include\kha\graphics2\GraphicsExtension.h" />
+		<ClInclude Include="Sources\include\kha\graphics2\Graphics1.h" />
+		<ClInclude Include="Sources\include\kha\graphics2\Graphics.h" />
+		<ClInclude Include="Sources\include\kha\graphics2\truetype\StbTruetype.h" />
+		<ClInclude Include="Sources\include\kha\graphics2\truetype\Stbtt__point.h" />
+		<ClInclude Include="Sources\include\kha\graphics2\truetype\Stbtt__active_edge.h" />
+		<ClInclude Include="Sources\include\kha\graphics2\truetype\Stbtt__edge.h" />
+		<ClInclude Include="Sources\include\kha\graphics2\truetype\Stbtt__bitmap.h" />
+		<ClInclude Include="Sources\include\kha\graphics2\truetype\Stbtt_vertex.h" />
+		<ClInclude Include="Sources\include\kha\graphics2\truetype\Stbtt_fontinfo.h" />
+		<ClInclude Include="Sources\include\kha\graphics2\truetype\Stbtt_pack_context.h" />
+		<ClInclude Include="Sources\include\kha\graphics2\truetype\Stbtt_pack_range.h" />
+		<ClInclude Include="Sources\include\kha\graphics2\truetype\Stbtt_packedchar.h" />
+		<ClInclude Include="Sources\include\kha\graphics2\truetype\Stbtt_aligned_quad.h" />
+		<ClInclude Include="Sources\include\kha\graphics2\truetype\Stbtt_bakedchar.h" />
+		<ClInclude Include="Sources\include\kha\graphics2\truetype\Stbtt_temp_region.h" />
+		<ClInclude Include="Sources\include\kha\graphics2\truetype\Stbtt_temp_font_v_metrics.h" />
+		<ClInclude Include="Sources\include\kha\graphics2\truetype\Stbtt_temp_glyph_h_metrics.h" />
+		<ClInclude Include="Sources\include\kha\graphics2\truetype\Stbtt_temp_rect.h" />
+		<ClInclude Include="Sources\include\kha\graphics2\truetype\VectorOfIntPointer.h" />
+		<ClInclude Include="Sources\include\kha\graphics1\Graphics.h" />
+		<ClInclude Include="Sources\include\kha\compute\TextureUnit.h" />
+		<ClInclude Include="Sources\include\kha\compute\Shader.h" />
+		<ClInclude Include="Sources\include\kha\compute\ConstantLocation.h" />
+		<ClInclude Include="Sources\include\kha\audio2\StreamChannel.h" />
+		<ClInclude Include="Sources\include\kha\audio2\Buffer.h" />
+		<ClInclude Include="Sources\include\kha\audio2\AudioChannel.h" />
+		<ClInclude Include="Sources\include\kha\audio2\Audio1.h" />
+		<ClInclude Include="Sources\include\kha\audio2\Audio.h" />
+		<ClInclude Include="Sources\include\kha\audio2\ogg\vorbis\VorbisTools.h" />
+		<ClInclude Include="Sources\include\kha\audio2\ogg\vorbis\VorbisDecoder.h" />
+		<ClInclude Include="Sources\include\kha\audio2\ogg\vorbis\VorbisDecodeState.h" />
+		<ClInclude Include="Sources\include\kha\audio2\ogg\vorbis\Reader.h" />
+		<ClInclude Include="Sources\include\kha\audio2\ogg\vorbis\data\Setting.h" />
+		<ClInclude Include="Sources\include\kha\audio2\ogg\vorbis\data\Residue.h" />
+		<ClInclude Include="Sources\include\kha\audio2\ogg\vorbis\data\ReaderErrorType.h" />
+		<ClInclude Include="Sources\include\kha\audio2\ogg\vorbis\data\ReaderError.h" />
+		<ClInclude Include="Sources\include\kha\audio2\ogg\vorbis\data\ProbedPage.h" />
+		<ClInclude Include="Sources\include\kha\audio2\ogg\vorbis\data\PageFlag.h" />
+		<ClInclude Include="Sources\include\kha\audio2\ogg\vorbis\data\Page.h" />
+		<ClInclude Include="Sources\include\kha\audio2\ogg\vorbis\data\Mode.h" />
+		<ClInclude Include="Sources\include\kha\audio2\ogg\vorbis\data\MappingChannel.h" />
+		<ClInclude Include="Sources\include\kha\audio2\ogg\vorbis\data\Mapping.h" />
+		<ClInclude Include="Sources\include\kha\audio2\ogg\vorbis\data\IntPoint.h" />
+		<ClInclude Include="Sources\include\kha\audio2\ogg\vorbis\data\Header.h" />
+		<ClInclude Include="Sources\include\kha\audio2\ogg\vorbis\data\Floor1.h" />
+		<ClInclude Include="Sources\include\kha\audio2\ogg\vorbis\data\Floor0.h" />
+		<ClInclude Include="Sources\include\kha\audio2\ogg\vorbis\data\Floor.h" />
+		<ClInclude Include="Sources\include\kha\audio2\ogg\vorbis\data\Comment.h" />
+		<ClInclude Include="Sources\include\kha\audio2\ogg\vorbis\data\Codebook.h" />
+		<ClInclude Include="Sources\include\kha\audio2\ogg\vorbis\_VorbisDecodeState\FindPageResult.h" />
+		<ClInclude Include="Sources\include\kha\audio2\ogg\tools\Mdct.h" />
+		<ClInclude Include="Sources\include\kha\audio2\ogg\tools\MathTools.h" />
+		<ClInclude Include="Sources\include\kha\audio2\ogg\tools\Crc32.h" />
+		<ClInclude Include="Sources\include\kha\audio1\AudioChannel.h" />
+		<ClInclude Include="Sources\include\kha\arrays\Uint32ArrayPrivate.h" />
+		<ClInclude Include="Sources\include\kha\arrays\Float32ArrayPrivate.h" />
+		<ClInclude Include="Sources\include\kha\arrays\_Uint32Array\Uint32Array_Impl_.h" />
+		<ClInclude Include="Sources\include\kha\arrays\_Float32Array\Float32Array_Impl_.h" />
+		<ClInclude Include="Sources\include\kha\_SuperString\SuperString_Impl_.h" />
+		<ClInclude Include="Sources\include\kha\_Color\Color_Impl_.h" />
+		<ClInclude Include="Sources\include\kha\_Assets\VideoList.h" />
+		<ClInclude Include="Sources\include\kha\_Assets\FontList.h" />
+		<ClInclude Include="Sources\include\kha\_Assets\BlobList.h" />
+		<ClInclude Include="Sources\include\kha\_Assets\SoundList.h" />
+		<ClInclude Include="Sources\include\kha\_Assets\ImageList.h" />
+		<ClInclude Include="Sources\include\iron\Scene.h" />
+		<ClInclude Include="Sources\include\iron\CachedShaderContext.h" />
+		<ClInclude Include="Sources\include\iron\RenderTarget.h" />
+		<ClInclude Include="Sources\include\iron\RenderTargetRaw.h" />
+		<ClInclude Include="Sources\include\iron\RenderPath.h" />
+		<ClInclude Include="Sources\include\iron\App.h" />
+		<ClInclude Include="Sources\include\iron\Trait.h" />
+		<ClInclude Include="Sources\include\iron\system\Tween.h" />
+		<ClInclude Include="Sources\include\iron\system\Time.h" />
+		<ClInclude Include="Sources\include\iron\system\Sensor.h" />
+		<ClInclude Include="Sources\include\iron\system\Gamepad.h" />
+		<ClInclude Include="Sources\include\iron\system\GamepadStick.h" />
+		<ClInclude Include="Sources\include\iron\system\Keyboard.h" />
+		<ClInclude Include="Sources\include\iron\system\Pen.h" />
+		<ClInclude Include="Sources\include\iron\system\Mouse.h" />
+		<ClInclude Include="Sources\include\iron\system\VirtualInput.h" />
+		<ClInclude Include="Sources\include\iron\system\VirtualButton.h" />
+		<ClInclude Include="Sources\include\iron\system\Input.h" />
+		<ClInclude Include="Sources\include\iron\system\Audio.h" />
+		<ClInclude Include="Sources\include\iron\system\ArmPack.h" />
+		<ClInclude Include="Sources\include\iron\object\Uniforms.h" />
+		<ClInclude Include="Sources\include\iron\object\Transform.h" />
+		<ClInclude Include="Sources\include\iron\object\Tilesheet.h" />
+		<ClInclude Include="Sources\include\iron\object\SpeakerObject.h" />
+		<ClInclude Include="Sources\include\iron\object\Particle.h" />
+		<ClInclude Include="Sources\include\iron\object\ParticleSystem.h" />
+		<ClInclude Include="Sources\include\iron\object\ObjectAnimation.h" />
+		<ClInclude Include="Sources\include\iron\object\MeshObject.h" />
+		<ClInclude Include="Sources\include\iron\object\LampObject.h" />
+		<ClInclude Include="Sources\include\iron\object\DecalObject.h" />
+		<ClInclude Include="Sources\include\iron\object\Constraint.h" />
+		<ClInclude Include="Sources\include\iron\object\FrustumPlane.h" />
+		<ClInclude Include="Sources\include\iron\object\CameraObject.h" />
+		<ClInclude Include="Sources\include\iron\object\Object.h" />
+		<ClInclude Include="Sources\include\iron\object\BoneAnimation.h" />
+		<ClInclude Include="Sources\include\iron\object\Animation.h" />
+		<ClInclude Include="Sources\include\iron\math\Vec2.h" />
+		<ClInclude Include="Sources\include\iron\math\RayCaster.h" />
+		<ClInclude Include="Sources\include\iron\math\Plane.h" />
+		<ClInclude Include="Sources\include\iron\math\Ray.h" />
+		<ClInclude Include="Sources\include\iron\math\Quat.h" />
+		<ClInclude Include="Sources\include\iron\math\Math.h" />
+		<ClInclude Include="Sources\include\iron\math\Mat3.h" />
+		<ClInclude Include="Sources\include\iron\math\Mat4.h" />
+		<ClInclude Include="Sources\include\iron\math\Vec4.h" />
+		<ClInclude Include="Sources\include\iron\data\Probe.h" />
+		<ClInclude Include="Sources\include\iron\data\WorldData.h" />
+		<ClInclude Include="Sources\include\iron\data\ShaderContext.h" />
+		<ClInclude Include="Sources\include\iron\data\ShaderData.h" />
+		<ClInclude Include="Sources\include\iron\data\SceneStream.h" />
+		<ClInclude Include="Sources\include\iron\data\StreamSector.h" />
+		<ClInclude Include="Sources\include\iron\data\ParticleData.h" />
+		<ClInclude Include="Sources\include\iron\data\MeshData.h" />
+		<ClInclude Include="Sources\include\iron\data\Bucket.h" />
+		<ClInclude Include="Sources\include\iron\data\MeshBatch.h" />
+		<ClInclude Include="Sources\include\iron\data\MaterialContext.h" />
+		<ClInclude Include="Sources\include\iron\data\MaterialData.h" />
+		<ClInclude Include="Sources\include\iron\data\LampData.h" />
+		<ClInclude Include="Sources\include\iron\data\Geometry.h" />
+		<ClInclude Include="Sources\include\iron\data\ConstData.h" />
+		<ClInclude Include="Sources\include\iron\data\CameraData.h" />
+		<ClInclude Include="Sources\include\iron\data\Data.h" />
+		<ClInclude Include="Sources\include\iron\data\Armature.h" />
+		<ClInclude Include="Sources\include\haxe\Utf8.h" />
+		<ClInclude Include="Sources\include\haxe\Unserializer.h" />
+		<ClInclude Include="Sources\include\haxe\Log.h" />
+		<ClInclude Include="Sources\include\haxe\IMap.h" />
+		<ClInclude Include="Sources\include\haxe\zip\Uncompress.h" />
+		<ClInclude Include="Sources\include\haxe\zip\Reader.h" />
+		<ClInclude Include="Sources\include\haxe\zip\InflateImpl.h" />
+		<ClInclude Include="Sources\include\haxe\zip\HuffTools.h" />
+		<ClInclude Include="Sources\include\haxe\zip\Huffman.h" />
+		<ClInclude Include="Sources\include\haxe\zip\ExtraField.h" />
+		<ClInclude Include="Sources\include\haxe\zip\_InflateImpl\State.h" />
+		<ClInclude Include="Sources\include\haxe\zip\_InflateImpl\Window.h" />
+		<ClInclude Include="Sources\include\haxe\io\Path.h" />
+		<ClInclude Include="Sources\include\haxe\io\FPHelper.h" />
+		<ClInclude Include="Sources\include\haxe\io\Error.h" />
+		<ClInclude Include="Sources\include\haxe\io\Eof.h" />
+		<ClInclude Include="Sources\include\haxe\io\BytesOutput.h" />
+		<ClInclude Include="Sources\include\haxe\io\Output.h" />
+		<ClInclude Include="Sources\include\haxe\io\BytesInput.h" />
+		<ClInclude Include="Sources\include\haxe\io\Input.h" />
+		<ClInclude Include="Sources\include\haxe\io\BytesBuffer.h" />
+		<ClInclude Include="Sources\include\haxe\io\Bytes.h" />
+		<ClInclude Include="Sources\include\haxe\format\JsonPrinter.h" />
+		<ClInclude Include="Sources\include\haxe\format\JsonParser.h" />
+		<ClInclude Include="Sources\include\haxe\ds\StringMap.h" />
+		<ClInclude Include="Sources\include\haxe\ds\ObjectMap.h" />
+		<ClInclude Include="Sources\include\haxe\ds\IntMap.h" />
+		<ClInclude Include="Sources\include\haxe\crypto\Adler32.h" />
+		<ClInclude Include="Sources\include\haxe\_Unserializer\DefaultResolver.h" />
+		<ClInclude Include="Sources\include\cpp\vm\Thread.h" />
+		<ClInclude Include="Sources\include\cpp\vm\Mutex.h" />
+		<ClInclude Include="Sources\include\armory\trait\WalkNavigation.h" />
+		<ClInclude Include="Sources\include\armory\trait\VirtualGamepad.h" />
+		<ClInclude Include="Sources\include\armory\trait\VehicleWheel.h" />
+		<ClInclude Include="Sources\include\armory\trait\VehicleBody.h" />
+		<ClInclude Include="Sources\include\armory\trait\VRNavigation.h" />
+		<ClInclude Include="Sources\include\armory\trait\ThirdPersonController.h" />
+		<ClInclude Include="Sources\include\armory\trait\SimpleScaleObject.h" />
+		<ClInclude Include="Sources\include\armory\trait\SimpleRotateObject.h" />
+		<ClInclude Include="Sources\include\armory\trait\SimpleMoveObject.h" />
+		<ClInclude Include="Sources\include\armory\trait\SidescrollerController.h" />
+		<ClInclude Include="Sources\include\armory\trait\SceneInstance.h" />
+		<ClInclude Include="Sources\include\armory\trait\PhysicsDrag.h" />
+		<ClInclude Include="Sources\include\armory\trait\Face3.h" />
+		<ClInclude Include="Sources\include\armory\trait\ConvexHull.h" />
+		<ClInclude Include="Sources\include\armory\trait\Plane.h" />
+		<ClInclude Include="Sources\include\armory\trait\Line3.h" />
+		<ClInclude Include="Sources\include\armory\trait\CutResult.h" />
+		<ClInclude Include="Sources\include\armory\trait\UserData.h" />
+		<ClInclude Include="Sources\include\armory\trait\ConvexBreaker.h" />
+		<ClInclude Include="Sources\include\armory\trait\PhysicsBreak.h" />
+		<ClInclude Include="Sources\include\armory\trait\NavMesh.h" />
+		<ClInclude Include="Sources\include\armory\trait\NavCrowd.h" />
+		<ClInclude Include="Sources\include\armory\trait\NavAgent.h" />
+		<ClInclude Include="Sources\include\armory\trait\Macro.h" />
+		<ClInclude Include="Sources\include\armory\trait\FollowCamera.h" />
+		<ClInclude Include="Sources\include\armory\trait\FirstPersonController.h" />
+		<ClInclude Include="Sources\include\armory\trait\Character.h" />
+		<ClInclude Include="Sources\include\armory\trait\CameraTexture.h" />
+		<ClInclude Include="Sources\include\armory\trait\ArcBall.h" />
+		<ClInclude Include="Sources\include\armory\trait\physics\SoftBody.h" />
+		<ClInclude Include="Sources\include\armory\trait\physics\RigidBody.h" />
+		<ClInclude Include="Sources\include\armory\trait\physics\PhysicsWorld.h" />
+		<ClInclude Include="Sources\include\armory\trait\physics\PhysicsHook.h" />
+		<ClInclude Include="Sources\include\armory\trait\physics\PhysicsConstraint.h" />
+		<ClInclude Include="Sources\include\armory\trait\physics\KinematicCharacterController.h" />
+		<ClInclude Include="Sources\include\armory\trait\navigation\Navigation.h" />
+		<ClInclude Include="Sources\include\armory\trait\internal\MovieTexture.h" />
+		<ClInclude Include="Sources\include\armory\trait\internal\LoadingScreen.h" />
+		<ClInclude Include="Sources\include\armory\trait\internal\DebugConsole.h" />
+		<ClInclude Include="Sources\include\armory\trait\internal\CanvasScript.h" />
+		<ClInclude Include="Sources\include\armory\trait\internal\CameraController.h" />
+		<ClInclude Include="Sources\include\armory\renderpath\RenderPathDeferred.h" />
+		<ClInclude Include="Sources\include\armory\renderpath\RenderPathCreator.h" />
+		<ClInclude Include="Sources\include\armory\renderpath\Inc.h" />
+		<ClInclude Include="Sources\include\armory\object\Uniforms.h" />
+		<ClInclude Include="Sources\include\armory\data\Config.h" />
+		<ClInclude Include="Sources\include\_List\ListIterator.h" />
+		<ClInclude Include="Sources\include\_List\ListNode.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\pch.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\Array.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\cpp_float32array.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\cpp_uint32array.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\Dynamic.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\Enum.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hxcpp.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hxMath.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hxString.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\null.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\cpp\CppInt32__.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\cpp\FastIterator.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\cpp\Int64.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\cpp\Pointer.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\cpp\Variant.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\cpp\VirtualArray.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\Anon.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\Boot.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\CFFI.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\CFFIAPI.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\CFFIJsPrime.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\CFFILoader.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\CFFINekoLoader.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\CFFIPrime.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\Class.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\Debug.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\DynamicImpl.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\ErrorCodes.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\FieldRef.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\Functions.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\GC.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\GcTypeInference.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\HeaderVersion.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\HxcppMain.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\IndexRef.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\Interface.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\LessThanEq.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\Macros.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\MacrosFixed.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\MacrosJumbo.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\Memory.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\Native.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\NekoFunc.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\ObjcHelpers.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\Object.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\Operators.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\OS.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\QuickVec.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\Scriptable.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\StackContext.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\StdLibs.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\StdString.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\Telemetry.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\Thread.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\Tls.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\Undefine.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\include\hx\Unordered.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\libs\common\osdef.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\libs\common\sha1.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\libs\common\socket.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\aes.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\aesni.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\arc4.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\asn1.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\asn1write.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\base64.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\bignum.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\blowfish.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\bn_mul.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\camellia.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\ccm.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\certs.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\check_config.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\cipher.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\cipher_internal.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\compat-1.3.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\config.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\ctr_drbg.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\debug.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\des.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\dhm.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\ecdh.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\ecdsa.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\ecjpake.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\ecp.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\entropy.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\entropy_poll.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\error.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\gcm.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\havege.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\hmac_drbg.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\md.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\md2.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\md4.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\md5.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\md_internal.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\memory_buffer_alloc.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\net.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\oid.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\padlock.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\pem.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\pk.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\pkcs11.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\pkcs12.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\pkcs5.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\pk_internal.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\platform.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\ripemd160.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\rsa.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\sha1.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\sha256.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\sha512.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\ssl.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\ssl_cache.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\ssl_ciphersuites.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\ssl_cookie.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\ssl_internal.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\ssl_ticket.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\threading.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\threading_alt.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\timing.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\version.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\x509.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\x509_crl.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\x509_crt.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\x509_csr.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\include\mbedtls\xtea.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\pcre-7.8\config.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\pcre-7.8\pcre.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\pcre-7.8\pcrecpp.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\pcre-7.8\pcrecpp_internal.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\pcre-7.8\pcreposix.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\pcre-7.8\pcre_internal.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\pcre-7.8\pcre_scanner.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\pcre-7.8\ucp.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\zlib-1.2.3\crc32.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\zlib-1.2.3\deflate.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\zlib-1.2.3\inffast.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\zlib-1.2.3\inffixed.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\zlib-1.2.3\inflate.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\zlib-1.2.3\inftrees.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\zlib-1.2.3\trees.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\zlib-1.2.3\zconf.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\zlib-1.2.3\zconf.in.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\zlib-1.2.3\zlib.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\zlib-1.2.3\zutil.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\src\hx\AbcOpCodes.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\src\hx\Hash.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\src\hx\gc\GcRegCapture.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Audio2\WASAPI\Sources\Kore\pch.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Audio3\A3onA2\Sources\Kore\pch.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics4\OpenGL\Sources\GL\eglew.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics4\OpenGL\Sources\GL\glew.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics4\OpenGL\Sources\GL\glxew.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics4\OpenGL\Sources\GL\wglew.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics4\OpenGL\Sources\Kore\ComputeImpl.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics4\OpenGL\Sources\Kore\GraphicsImpl.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics4\OpenGL\Sources\Kore\IndexBufferImpl.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics4\OpenGL\Sources\Kore\ogl.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics4\OpenGL\Sources\Kore\OpenGL.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics4\OpenGL\Sources\Kore\pch.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics4\OpenGL\Sources\Kore\PipelineStateImpl.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics4\OpenGL\Sources\Kore\RenderTargetImpl.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics4\OpenGL\Sources\Kore\ShaderImpl.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics4\OpenGL\Sources\Kore\ShaderStorageBufferImpl.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics4\OpenGL\Sources\Kore\TextureArrayImpl.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics4\OpenGL\Sources\Kore\TextureImpl.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics4\OpenGL\Sources\Kore\VertexBufferImpl.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics5\G5onG4\Sources\Kore\CommandList5Impl.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics5\G5onG4\Sources\Kore\ConstantBuffer5Impl.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics5\G5onG4\Sources\Kore\G5onG4.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics5\G5onG4\Sources\Kore\Graphics5Impl.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics5\G5onG4\Sources\Kore\IndexBuffer5Impl.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics5\G5onG4\Sources\Kore\pch.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics5\G5onG4\Sources\Kore\PipelineState5Impl.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics5\G5onG4\Sources\Kore\RenderTarget5Impl.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics5\G5onG4\Sources\Kore\Shader5Impl.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics5\G5onG4\Sources\Kore\Texture5Impl.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics5\G5onG4\Sources\Kore\VertexBuffer5Impl.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Microsoft\Sources\Kore\EventImpl.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Microsoft\Sources\Kore\MutexImpl.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Microsoft\Sources\Kore\pch.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Microsoft\Sources\Kore\SemaphoreImpl.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Microsoft\Sources\Kore\SystemMicrosoft.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Microsoft\Sources\Kore\ThreadImpl.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Microsoft\Sources\Kore\ThreadLocalImpl.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\amextra.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\amfilter.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\cache.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\checkbmi.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\combase.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\cprop.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\ctlutil.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\ddmm.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\dllsetup.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\dxmperf.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\fourcc.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\measure.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\msgthrd.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\mtype.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\outputq.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\perflog.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\perfstruct.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\pstream.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\pullpin.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\refclock.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\reftime.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\renbase.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\schedule.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\seekpt.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\source.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\streams.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\strmctl.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\sysclock.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\transfrm.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\transip.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\videoctl.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\vtrans.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\winctrl.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\winutil.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\wxdebug.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\wxlist.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\wxutil.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Sources\Kore\Display.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Sources\Kore\pch.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Sources\Kore\SystemWindows.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Sources\Kore\Video.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Sources\Kore\VideoSoundStream.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Error.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\ErrorArgs.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Log.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\LogArgs.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\pch.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\System.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Window.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Audio1\Audio.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Audio1\pch.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Audio1\Sound.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Audio1\SoundStream.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Audio2\Audio.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Audio2\pch.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Audio3\Audio.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Audio3\pch.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Audio3\TextToSpeech.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Compute\Compute.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics1\Color.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics1\Graphics.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics1\Image.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics1\pch.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics1\stb_image.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics2\Graphics.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics2\Kravur.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics2\pch.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics3\Graphics.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics3\Light.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics3\pch.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics3\Texture.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics4\Graphics.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics4\pch.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics4\PipelineState.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics4\Shader.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics4\Texture.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics4\TextureArray.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics4\VertexStructure.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics5\CommandList.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics5\ConstantBuffer.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics5\Graphics.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics5\pch.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics5\PipelineState.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics5\Shader.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics5\Texture.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics5\VertexStructure.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Input\Gamepad.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Input\Keyboard.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Input\Mouse.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Input\pch.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Input\Pen.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Input\Sensor.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Input\Surface.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\IO\BufferReader.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\IO\FileReader.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\IO\FileWriter.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\IO\pch.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\IO\Reader.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\IO\Writer.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\IO\lz4\lz4.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\IO\lz4\lz4frame.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\IO\lz4\lz4frame_static.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\IO\lz4\lz4hc.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\IO\lz4\lz4opt.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\IO\lz4\xxhash.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Math\Core.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Math\Matrix.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Math\pch.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Math\Quaternion.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Math\Random.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Math\Vector.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Network\Connection.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Network\Http.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Network\pch.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Network\Socket.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Simd\float32x4.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Threads\Event.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Threads\Mutex.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Threads\Semaphore.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Threads\Thread.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Threads\ThreadLocal.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Vr\CameraImage.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Vr\pch.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Vr\SensorState.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Vr\VrInterface.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Vr\VrPose.h" />
+		<ClInclude Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Vr\VrPoseState.h" />
+	</ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="Sources\src\Type.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\ValueType.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\StringTools.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\StringBuf.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\Std.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\Reflect.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\Main.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\List.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\Lambda.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\Date.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\__lib__.cpp" />
+		<ClCompile Include="Sources\src\__boot__.cpp" />
+		<ClCompile Include="Sources\src\__files__.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\__resources__.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\sys\FileSystem.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\sys\io\FileSeek.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\sys\io\FileOutput.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\sys\io\FileInput.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\sys\io\File.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\Worker.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\WindowOptions.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\WindowedModeOptions.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\RendererOptions.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\TargetDisplay.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\Position.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\WindowMode.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\Video.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\SystemImpl.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\System.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\Sound.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\Shaders.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\ScreenRotation.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\Scheduler.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\FrameTask.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\TimeTask.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\LoaderImpl.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\Kravur.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\KravurImage.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\AlignedQuad.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\Image.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\Resource.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\Framebuffer.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\DisplayImpl.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\Display.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\Canvas.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\Assets.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\vr\VrInterfaceEmulated.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\vr\VrInterface.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\vr\TimeWarpParms.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\vr\TimeWarpImage.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\vr\SensorState.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\vr\PoseState.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\vr\Pose.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\network\SyncBuilder.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\network\Session.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\network\State.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\network\Network.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\network\LocalClient.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\network\Entity.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\network\ControllerBuilder.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\network\Client.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\network\Controller.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\math\Vector4.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\math\Vector3.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\math\Vector2.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\math\Quaternion.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\math\Matrix4.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\math\Matrix3.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\math\FastVector4.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\math\FastVector3.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\math\FastVector2.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\math\FastMatrix3.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\math\FastMatrix4.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\kore\Video.cpp">
+			<ObjectFileName>$(IntDir)\video_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\kore\Sound.cpp">
+			<ObjectFileName>$(IntDir)\sound_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\kore\Keyboard.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\kore\graphics4\TextureUnit.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\kore\graphics4\Graphics2.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\kore\graphics4\Graphics.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\kore\graphics4\ConstantLocation.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\internal\BytesBlob.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\input\Surface.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\input\SensorType.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\input\Sensor.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\input\Pen.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\input\MouseImpl.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\input\Mouse.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\input\Keyboard.cpp">
+			<ObjectFileName>$(IntDir)\keyboard_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\input\Gamepad.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics4\VertexStructure.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics4\VertexShader.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics4\VertexElement.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics4\VertexData.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics4\VertexBuffer.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics4\Usage.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics4\TextureUnit.cpp">
+			<ObjectFileName>$(IntDir)\textureunit_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics4\TextureFormat.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics4\TextureFilter.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics4\TextureAddressing.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics4\TexDir.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics4\TessellationEvaluationShader.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics4\TessellationControlShader.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics4\StencilAction.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics4\PipelineState.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics4\PipelineStateBase.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics4\MipMapFilter.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics4\IndexBuffer.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics4\Graphics2.cpp">
+			<ObjectFileName>$(IntDir)\graphics2_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics4\TextShaderPainter.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics4\ColoredShaderPainter.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics4\ImageShaderPainter.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics4\Graphics.cpp">
+			<ObjectFileName>$(IntDir)\graphics_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics4\GeometryShader.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics4\FragmentShader.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics4\CullMode.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics4\CubeMap.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics4\ConstantLocation.cpp">
+			<ObjectFileName>$(IntDir)\constantlocation_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics4\CompareMode.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics4\BlendingOperation.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics4\BlendingFactor.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics2\VerTextAlignment.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics2\ImageScaleQuality.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics2\HorTextAlignment.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics2\GraphicsExtension.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics2\Graphics1.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics2\Graphics.cpp">
+			<ObjectFileName>$(IntDir)\graphics__.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics2\truetype\StbTruetype.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics2\truetype\Stbtt__point.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics2\truetype\Stbtt__active_edge.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics2\truetype\Stbtt__edge.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics2\truetype\Stbtt__bitmap.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics2\truetype\Stbtt_vertex.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics2\truetype\Stbtt_fontinfo.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics2\truetype\Stbtt_pack_context.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics2\truetype\Stbtt_pack_range.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics2\truetype\Stbtt_packedchar.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics2\truetype\Stbtt_aligned_quad.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics2\truetype\Stbtt_bakedchar.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics2\truetype\Stbtt_temp_region.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics2\truetype\Stbtt_temp_font_v_metrics.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics2\truetype\Stbtt_temp_glyph_h_metrics.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics2\truetype\Stbtt_temp_rect.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics2\truetype\VectorOfIntPointer.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\graphics1\Graphics.cpp">
+			<ObjectFileName>$(IntDir)\graphics___.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\compute\TextureUnit.cpp">
+			<ObjectFileName>$(IntDir)\textureunit__.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\compute\Shader.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\compute\ConstantLocation.cpp">
+			<ObjectFileName>$(IntDir)\constantlocation__.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\audio2\StreamChannel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\audio2\Buffer.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\audio2\AudioChannel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\audio2\Audio1.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\audio2\Audio.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\audio2\ogg\vorbis\VorbisTools.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\audio2\ogg\vorbis\VorbisDecoder.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\audio2\ogg\vorbis\VorbisDecodeState.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\audio2\ogg\vorbis\Reader.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\audio2\ogg\vorbis\data\Setting.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\audio2\ogg\vorbis\data\Residue.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\audio2\ogg\vorbis\data\ReaderErrorType.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\audio2\ogg\vorbis\data\ReaderError.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\audio2\ogg\vorbis\data\ProbedPage.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\audio2\ogg\vorbis\data\PageFlag.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\audio2\ogg\vorbis\data\Page.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\audio2\ogg\vorbis\data\Mode.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\audio2\ogg\vorbis\data\MappingChannel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\audio2\ogg\vorbis\data\Mapping.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\audio2\ogg\vorbis\data\IntPoint.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\audio2\ogg\vorbis\data\Header.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\audio2\ogg\vorbis\data\Floor1.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\audio2\ogg\vorbis\data\Floor0.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\audio2\ogg\vorbis\data\Floor.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\audio2\ogg\vorbis\data\Comment.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\audio2\ogg\vorbis\data\Codebook.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\audio2\ogg\vorbis\_VorbisDecodeState\FindPageResult.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\audio2\ogg\tools\Mdct.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\audio2\ogg\tools\MathTools.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\audio2\ogg\tools\Crc32.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\audio1\AudioChannel.cpp">
+			<ObjectFileName>$(IntDir)\audiochannel_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\arrays\Uint32ArrayPrivate.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\arrays\Float32ArrayPrivate.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\arrays\_Uint32Array\Uint32Array_Impl_.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\arrays\_Float32Array\Float32Array_Impl_.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\_SuperString\SuperString_Impl_.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\_Color\Color_Impl_.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\_Assets\VideoList.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\_Assets\FontList.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\_Assets\BlobList.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\_Assets\SoundList.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\kha\_Assets\ImageList.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\Scene.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\CachedShaderContext.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\RenderTarget.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\RenderTargetRaw.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\RenderPath.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\App.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\Trait.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\system\Tween.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\system\Time.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\system\Sensor.cpp">
+			<ObjectFileName>$(IntDir)\sensor_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\system\Gamepad.cpp">
+			<ObjectFileName>$(IntDir)\gamepad_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\system\GamepadStick.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\system\Keyboard.cpp">
+			<ObjectFileName>$(IntDir)\keyboard__.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\system\Pen.cpp">
+			<ObjectFileName>$(IntDir)\pen_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\system\Mouse.cpp">
+			<ObjectFileName>$(IntDir)\mouse_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\system\VirtualInput.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\system\VirtualButton.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\system\Input.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\system\Audio.cpp">
+			<ObjectFileName>$(IntDir)\audio_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\system\ArmPack.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\object\Uniforms.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\object\Transform.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\object\Tilesheet.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\object\SpeakerObject.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\object\Particle.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\object\ParticleSystem.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\object\ObjectAnimation.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\object\MeshObject.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\object\LampObject.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\object\DecalObject.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\object\Constraint.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\object\FrustumPlane.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\object\CameraObject.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\object\Object.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\object\BoneAnimation.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\object\Animation.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\math\Vec2.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\math\RayCaster.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\math\Plane.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\math\Ray.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\math\Quat.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\math\Math.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\math\Mat3.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\math\Mat4.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\math\Vec4.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\data\Probe.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\data\WorldData.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\data\ShaderContext.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\data\ShaderData.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\data\SceneStream.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\data\StreamSector.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\data\ParticleData.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\data\MeshData.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\data\Bucket.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\data\MeshBatch.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\data\MaterialContext.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\data\MaterialData.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\data\LampData.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\data\Geometry.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\data\ConstData.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\data\CameraData.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\data\Data.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\iron\data\Armature.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\haxe\Utf8.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\haxe\Unserializer.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\haxe\Log.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\haxe\IMap.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\haxe\zip\Uncompress.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\haxe\zip\Reader.cpp">
+			<ObjectFileName>$(IntDir)\reader_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="Sources\src\haxe\zip\InflateImpl.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\haxe\zip\HuffTools.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\haxe\zip\Huffman.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\haxe\zip\ExtraField.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\haxe\zip\_InflateImpl\State.cpp">
+			<ObjectFileName>$(IntDir)\state_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="Sources\src\haxe\zip\_InflateImpl\Window.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\haxe\io\Path.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\haxe\io\FPHelper.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\haxe\io\Error.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\haxe\io\Eof.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\haxe\io\BytesOutput.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\haxe\io\Output.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\haxe\io\BytesInput.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\haxe\io\Input.cpp">
+			<ObjectFileName>$(IntDir)\input_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="Sources\src\haxe\io\BytesBuffer.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\haxe\io\Bytes.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\haxe\format\JsonPrinter.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\haxe\format\JsonParser.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\haxe\ds\StringMap.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\haxe\ds\ObjectMap.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\haxe\ds\IntMap.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\haxe\crypto\Adler32.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\haxe\_Unserializer\DefaultResolver.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\cpp\vm\Thread.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\cpp\vm\Mutex.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\WalkNavigation.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\VirtualGamepad.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\VehicleWheel.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\VehicleBody.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\VRNavigation.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\ThirdPersonController.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\SimpleScaleObject.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\SimpleRotateObject.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\SimpleMoveObject.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\SidescrollerController.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\SceneInstance.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\PhysicsDrag.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\Face3.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\ConvexHull.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\Plane.cpp">
+			<ObjectFileName>$(IntDir)\plane_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\Line3.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\CutResult.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\UserData.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\ConvexBreaker.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\PhysicsBreak.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\NavMesh.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\NavCrowd.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\NavAgent.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\Macro.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\FollowCamera.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\FirstPersonController.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\Character.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\CameraTexture.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\ArcBall.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\physics\SoftBody.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\physics\RigidBody.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\physics\PhysicsWorld.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\physics\PhysicsHook.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\physics\PhysicsConstraint.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\physics\KinematicCharacterController.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\navigation\Navigation.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\internal\MovieTexture.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\internal\LoadingScreen.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\internal\DebugConsole.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\internal\CanvasScript.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\trait\internal\CameraController.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\renderpath\RenderPathDeferred.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\renderpath\RenderPathCreator.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\renderpath\Inc.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\object\Uniforms.cpp">
+			<ObjectFileName>$(IntDir)\uniforms_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="Sources\src\armory\data\Config.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\_List\ListIterator.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="Sources\src\_List\ListNode.cpp">
+			<PrecompiledHeader>Use</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\main.cpp">
+			<ObjectFileName>$(IntDir)\main_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\libs\common\sha1.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\libs\common\socket.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\libs\msvccompat\StlLink.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\libs\regexp\RegExp.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\libs\std\File.cpp">
+			<ObjectFileName>$(IntDir)\file_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\libs\std\Init.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\libs\std\Interface.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\libs\std\Misc.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\libs\std\Process.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\libs\std\Random.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\libs\std\Socket.cpp">
+			<ObjectFileName>$(IntDir)\socket_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\libs\std\String.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\libs\std\Sys.winrt.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\libs\std\Xml.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\aes.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\aesni.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\arc4.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\asn1parse.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\asn1write.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\base64.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\bignum.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\blowfish.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\camellia.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\ccm.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\certs.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\cipher.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\cipher_wrap.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\ctr_drbg.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\debug.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\des.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\dhm.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\ecdh.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\ecdsa.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\ecjpake.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\ecp.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\ecp_curves.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\entropy.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\entropy_poll.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\error.c">
+			<ObjectFileName>$(IntDir)\error_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\gcm.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\havege.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\hmac_drbg.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\md.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\md2.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\md4.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\md5.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\md_wrap.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\memory_buffer_alloc.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\net.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\oid.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\padlock.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\pem.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\pk.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\pkcs11.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\pkcs12.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\pkcs5.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\pkparse.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\pkwrite.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\pk_wrap.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\platform.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\ripemd160.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\rsa.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\sha1.c">
+			<ObjectFileName>$(IntDir)\sha1_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\sha256.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\sha512.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\ssl_cache.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\ssl_ciphersuites.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\ssl_cli.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\ssl_cookie.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\ssl_srv.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\ssl_ticket.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\ssl_tls.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\threading.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\timing.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\version.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\version_features.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\x509.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\x509write_crt.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\x509write_csr.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\x509_create.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\x509_crl.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\x509_crt.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\x509_csr.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\mbedtls-2.2.1\library\xtea.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\pcre-7.8\pcreposix.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\pcre-7.8\pcre_chartables.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\pcre-7.8\pcre_compile.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\pcre-7.8\pcre_config.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\pcre-7.8\pcre_dfa_exec.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\pcre-7.8\pcre_exec.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\pcre-7.8\pcre_fullinfo.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\pcre-7.8\pcre_get.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\pcre-7.8\pcre_globals.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\pcre-7.8\pcre_info.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\pcre-7.8\pcre_maketables.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\pcre-7.8\pcre_newline.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\pcre-7.8\pcre_ord2utf8.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\pcre-7.8\pcre_refcount.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\pcre-7.8\pcre_study.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\pcre-7.8\pcre_tables.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\pcre-7.8\pcre_try_flipped.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\pcre-7.8\pcre_ucd.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\pcre-7.8\pcre_valid_utf8.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\pcre-7.8\pcre_version.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\pcre-7.8\pcre_xclass.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\zlib-1.2.3\adler32.c">
+			<ObjectFileName>$(IntDir)\adler32_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\zlib-1.2.3\compress.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\zlib-1.2.3\crc32.c">
+			<ObjectFileName>$(IntDir)\crc32_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\zlib-1.2.3\deflate.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\zlib-1.2.3\gzio.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\zlib-1.2.3\infback.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\zlib-1.2.3\inffast.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\zlib-1.2.3\inflate.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\zlib-1.2.3\inftrees.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\zlib-1.2.3\trees.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\zlib-1.2.3\uncompr.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\project\thirdparty\zlib-1.2.3\zutil.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\src\Array.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\src\Dynamic.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\src\Enum.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\src\hxcpp.cpp">
+			<PrecompiledHeader>Create</PrecompiledHeader>
+			<PrecompiledHeaderFile>hxcpp.h</PrecompiledHeaderFile>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\src\Math.cpp">
+			<ObjectFileName>$(IntDir)\math_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\src\String.cpp">
+			<ObjectFileName>$(IntDir)\string_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\src\hx\Anon.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\src\hx\Boot.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\src\hx\CFFI.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\src\hx\Class.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\src\hx\Date.cpp">
+			<ObjectFileName>$(IntDir)\date_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\src\hx\Debug.cpp">
+			<ObjectFileName>$(IntDir)\debug_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\src\hx\Hash.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\src\hx\Interface.cpp">
+			<ObjectFileName>$(IntDir)\interface_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\src\hx\Lib.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\src\hx\Object.cpp">
+			<ObjectFileName>$(IntDir)\object_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\src\hx\RunLibs.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\src\hx\StdLibs.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\src\hx\Thread.cpp">
+			<ObjectFileName>$(IntDir)\thread_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\src\hx\gc\GcCommon.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\src\hx\gc\GcRegCapture.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\src\hx\gc\Immix.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\src\hx\libs\regexp\RegExp.cpp">
+			<ObjectFileName>$(IntDir)\regexp_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\src\hx\libs\ssl\SSL.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\src\hx\libs\std\File.cpp">
+			<ObjectFileName>$(IntDir)\file__.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\src\hx\libs\std\Process.cpp">
+			<ObjectFileName>$(IntDir)\process_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\src\hx\libs\std\Random.cpp">
+			<ObjectFileName>$(IntDir)\random_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\src\hx\libs\std\Socket.cpp">
+			<ObjectFileName>$(IntDir)\socket__.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\src\hx\libs\std\Sys.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Backends\Kore\khacpp\src\hx\libs\zlib\ZLib.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Audio2\WASAPI\Sources\Kore\WASAPI.winrt.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Audio3\A3onA2\Sources\Kore\Audio.cpp">
+			<ObjectFileName>$(IntDir)\audio__.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Audio3\A3onA2\Sources\Kore\TextToSpeech.winrt.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics4\OpenGL\Sources\GL\glew.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics4\OpenGL\Sources\Kore\ComputeImpl.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics4\OpenGL\Sources\Kore\IndexBufferImpl.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics4\OpenGL\Sources\Kore\OpenGL.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics4\OpenGL\Sources\Kore\PipelineStateImpl.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics4\OpenGL\Sources\Kore\RenderTargetImpl.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics4\OpenGL\Sources\Kore\ShaderImpl.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics4\OpenGL\Sources\Kore\ShaderStorageBufferImpl.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics4\OpenGL\Sources\Kore\TextureArrayImpl.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics4\OpenGL\Sources\Kore\TextureImpl.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics4\OpenGL\Sources\Kore\VertexBufferImpl.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics4\OpenGL\Sources\Kore\VrInterface.cpp">
+			<ObjectFileName>$(IntDir)\vrinterface_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics5\G5onG4\Sources\Kore\CommandList5Impl.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics5\G5onG4\Sources\Kore\ConstantBuffer5Impl.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics5\G5onG4\Sources\Kore\G5onG4.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics5\G5onG4\Sources\Kore\IndexBuffer5Impl.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics5\G5onG4\Sources\Kore\PipelineState5Impl.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics5\G5onG4\Sources\Kore\RenderTarget5Impl.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics5\G5onG4\Sources\Kore\Shader5Impl.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics5\G5onG4\Sources\Kore\Texture5Impl.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\Graphics5\G5onG4\Sources\Kore\VertexBuffer5Impl.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Microsoft\Sources\Kore\Event.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Microsoft\Sources\Kore\Mutex.cpp">
+			<ObjectFileName>$(IntDir)\mutex_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Microsoft\Sources\Kore\Semaphore.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Microsoft\Sources\Kore\SystemMicrosoft.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Microsoft\Sources\Kore\Thread.cpp">
+			<ObjectFileName>$(IntDir)\thread__.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Microsoft\Sources\Kore\ThreadLocal.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\amextra.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\amfilter.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\amvideo.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\arithutil.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\combase.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\cprop.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\ctlutil.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\ddmm.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\dllentry.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\dllsetup.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\mtype.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\outputq.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\perflog.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\pstream.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\pullpin.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\refclock.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\renbase.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\schedule.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\seekpt.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\source.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\strmctl.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\sysclock.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\transfrm.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\transip.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\videoctl.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\vtrans.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\winctrl.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\winutil.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\wxdebug.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\wxlist.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Libraries\DirectShow\BaseClasses\wxutil.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Sources\Kore\Display.cpp">
+			<ObjectFileName>$(IntDir)\display_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Sources\Kore\System.cpp">
+			<ObjectFileName>$(IntDir)\system_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Sources\Kore\SystemWindows.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Sources\Kore\Video.cpp">
+			<ObjectFileName>$(IntDir)\video__.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Sources\Kore\VrInterface_SteamVR.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Backends\System\Windows\Sources\Kore\Input\Mouse.cpp">
+			<ObjectFileName>$(IntDir)\mouse__.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\CodeStyle.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Error.cpp">
+			<ObjectFileName>$(IntDir)\error__.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Log.cpp">
+			<ObjectFileName>$(IntDir)\log_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\System.cpp">
+			<ObjectFileName>$(IntDir)\system__.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Audio1\Audio.cpp">
+			<ObjectFileName>$(IntDir)\audio___.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Audio1\Sound.cpp">
+			<ObjectFileName>$(IntDir)\sound__.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Audio1\SoundStream.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Audio1\stb_vorbis.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Audio2\Audio.cpp">
+			<ObjectFileName>$(IntDir)\audio____.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Audio3\Audio.cpp">
+			<ObjectFileName>$(IntDir)\audio_____.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics1\Color.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics1\Graphics.cpp">
+			<ObjectFileName>$(IntDir)\graphics____.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics1\Image.cpp">
+			<ObjectFileName>$(IntDir)\image_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics2\Graphics.cpp">
+			<ObjectFileName>$(IntDir)\graphics_____.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics2\Kravur.cpp">
+			<ObjectFileName>$(IntDir)\kravur_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics3\Graphics.cpp">
+			<ObjectFileName>$(IntDir)\graphics______.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics3\Texture.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics4\Graphics.cpp">
+			<ObjectFileName>$(IntDir)\graphics_______.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics4\PipelineState.cpp">
+			<ObjectFileName>$(IntDir)\pipelinestate_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics4\Texture.cpp">
+			<ObjectFileName>$(IntDir)\texture_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics4\TextureArray.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics5\CommandList.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics5\ConstantBuffer.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics5\Graphics.cpp">
+			<ObjectFileName>$(IntDir)\graphics________.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics5\PipelineState.cpp">
+			<ObjectFileName>$(IntDir)\pipelinestate__.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Graphics5\Texture.cpp">
+			<ObjectFileName>$(IntDir)\texture__.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Input\Gamepad.cpp">
+			<ObjectFileName>$(IntDir)\gamepad__.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Input\Keyboard.cpp">
+			<ObjectFileName>$(IntDir)\keyboard___.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Input\Mouse.cpp">
+			<ObjectFileName>$(IntDir)\mouse___.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Input\Pen.cpp">
+			<ObjectFileName>$(IntDir)\pen__.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Input\Sensor.cpp">
+			<ObjectFileName>$(IntDir)\sensor__.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Input\Surface.cpp">
+			<ObjectFileName>$(IntDir)\surface_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\IO\BufferReader.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\IO\FileReader.winrt.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\IO\FileWriter.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\IO\Reader.cpp">
+			<ObjectFileName>$(IntDir)\reader__.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\IO\Writer.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\IO\lz4\lz4.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\IO\lz4\lz4frame.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\IO\lz4\lz4hc.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\IO\lz4\xxhash.c" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Math\Core.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Math\Quaternion.cpp">
+			<ObjectFileName>$(IntDir)\quaternion_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Math\Random.cpp">
+			<ObjectFileName>$(IntDir)\random__.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Network\Connection.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Network\Http.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Network\Socket.cpp">
+			<ObjectFileName>$(IntDir)\socket___.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Vr\CameraImage.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Vr\SensorState.cpp">
+			<ObjectFileName>$(IntDir)\sensorstate_.obj</ObjectFileName>
+		</ClCompile>
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Vr\VrPose.cpp" />
+		<ClCompile Include="C:\Armory_04_win64_b27\Armory\armsdk\Kha\Kore\Sources\Kore\Vr\VrPoseState.cpp" />
+	</ItemGroup>
+	<ItemGroup>
+	</ItemGroup>
+	<ItemGroup>
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="icon.ico" />
+	</ItemGroup>
+	<ItemGroup>
+		<ResourceCompile Include="resources.rc" />
+	</ItemGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+	<ImportGroup Label="ExtensionTargets">
+	</ImportGroup>
+</Project>

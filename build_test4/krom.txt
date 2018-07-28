@@ -1,0 +1,10 @@
+Trace: TypeError: Cannot read property 'raw' of null
+    at $hxClasses.iron.object.BoneAnimation.updateConstraints (krom.js:12515:21)
+    at $hxClasses.iron.object.BoneAnimation.updateAnim (krom.js:12504:8)
+    at $hxClasses.iron.object.BoneAnimation.update (krom.js:12462:8)
+    at $hxClasses.iron.Scene.updateFrame (krom.js:3902:9)
+    at iron_App.update (krom.js:2503:20)
+    at $hxClasses.kha.TimeTask.task (krom.js:18957:3)
+    at Function.kha_Scheduler.executeTimeTasks (krom.js:18841:75)
+    at Function.kha_Scheduler.executeFrame (krom.js:18793:17)
+    at kha_SystemImpl.renderCallback (krom.js:19723:16)
